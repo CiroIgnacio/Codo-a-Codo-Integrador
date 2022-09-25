@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h5 {
+  font-size: 2rem !important;
+}
+
+footer {
+    background-color:#092D47;
+}
+
+ul{
+    list-style-type: none;
+}
+#logo {
+  width: 30%;
+  height: 30%;
+}
+
+#image-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/ba1.jpg);
+  min-height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+u.dotted{    
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
+}
+
+.card-item > img{
+    height: 45vh;
+    object-fit: 100% 100%;
+}
+
+.card-body {
+    position: relative;
+    height: 30%;
+}
+
+
+.geo-info {
+    height: 50%;
+
+}
