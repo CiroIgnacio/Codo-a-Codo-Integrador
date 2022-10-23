@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
     <title>Codo a Codo Conf. Bs As</title>
+    
   </head>
   <body>
     <div class="container-fluid m-0 p-0">
@@ -64,12 +65,107 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-success" href="#">Comprar tickets</a>
+                <a class="nav-link text-success" data-bs-toggle="modal" data-bs-target="#ticketsModal" href="#">Comprar tickets</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+<div class="modal fade" id="ticketsModal" tabindex="-1" aria-labelledby="ticketsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">       
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row d-flex justify-content-center gap-2">
+        <div class="card col-md-4 border-primary rounded-0" style="width: 18rem;">
+          <div class="card-body">          
+            <h5 class="card-title text-center">Estudiante</h5>
+            <p class="card-text fs-5 my-4 text-center">Tienen un descuento</p>
+            <p class="card-text fw-bold my-4 text-center">80%</p>
+            <p class="card-text text-muted my-4 text-center">* presentar documentación</p>
+          </div>
+        </div>
+        <div class="card col-md-4 border-info rounded-0" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Trainee</h5>         
+            <p class="card-text fs-5 my-4 text-center">Tienen un descuento</p>
+            <p class="card-text fw-bold my-4 text-center">50%</p>
+            <p class="card-text text-muted my-4 text-center">* presentar documentación</p>
+          </div>
+        </div>
+        <div class="card col-md-4 border-warning rounded-0" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center">Junior</h5>            
+            <p class="card-text fs-5 my-4 text-center">Tienen un descuento</p>
+            <p class="card-text fw-bold my-4 text-center">15%</p>
+            <p class="card-text text-muted my-4 text-center">* presentar documentación</p>  
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mx-auto mt-3">
+        <p
+          class="text-center fs-6 mb-1"
+          style="font-size: 0.9rem !important"
+        >
+          VENTA
+        </p>
+      </div>
+      <div class="mx-auto">
+        <h3 class="text-center">VALOR DE TICKET $200</h3>
+      </div>
+      <form action="" id="form-modal" >
+        <div class="row d-flex flex-md-row flex-column align-items-center justify-content-center">
+        <div class="mb-3 col-md-4 col-sm-12">
+          <label for="nombre-modal" class="form-label"></label>
+          <input type="text" class="form-control" id="nombre-modal" placeholder="Nombre">
+        </div>
+        <div class="mb-3 col-md-4 col-sm-12">
+          <label for="apellido-modal" class="form-label"></label>
+          <input type="text" class="form-control" id="apellido-modal" placeholder="Apellido">
+        </div>
+        </div>
+        <div class="row d-flex flex-md-row flex-column align-items-center justify-content-center">
+        <div class="mb-3 col-md-8">
+          <label for="correo-modal" class="form-label"></label>
+          <input type="email" class="form-control" id="correo-modal" placeholder="Correo">
+        </div>
+      </div>
+        <div class="row d-flex flex-md-row flex-column align-items-center justify-content-center">
+        <div class="mb-3 col-md-4 col-sm-12">
+          <label for="cantidad-modal" class="form-label">Cantidad</label>
+          <input type="number" min = "1" class="form-control" id="quantity-input" value="1">
+        </div>        
+        <div class="mb-3 col-md-4 col-sm-12">
+          <label for="categoria-modal" class="form-label">Categoría</label>
+          <select class="form-select" id= "category-select" aria-label="category select">            
+            <option selected value="1">Estudiante</option>
+            <option value="2">Trainee</option>
+            <option value="3">Junior</option>
+          </select>
+        </div>         
+        </div>       
+        <div class="row d-flex flex-md-row flex-column align-items-center justify-content-center my-3">
+          <div class="col-md-8 col-sm-12">
+            <p class= "text-primary" id="summary"></p>
+            <p class= "text-primary bg-primary bg-opacity-25 rounded p-3">Total a Pagar: $ <span id="result-span"></span></p>
+          </div>
+        </div>
+        <div class="row my-3 d-flex flex-md-row flex-column align-items-center justify-content-center">    
+          <div class="mb-3 col-md-4 col-sm-12">
+            <button class="btn btn-success mb-3 col-md-12 col-sm-12" id="delete-btn" type="button">Borrar</button>      
+          </div> 
+          <div class="mb-3 col-md-4 col-sm-12">
+            <button type="button" class=" btn btn-success mb-3 col-md-12 col-sm-12" id="result-btn">Resumen</button>     
+          </div>         
+        </div>
+    </form>
+    </div>
+      </div>    
+    </div>
+  </div>
+</div>
       <div
         class="d-flex container-fluid justify-content-end align-items-center"
         id="image-header"
@@ -95,7 +191,7 @@
               >
             </button>
             <button type="button" class="btn btn-success p-2">
-              <a class="text-light p-2" href="#">Comprar tickets</a>
+              <a class="text-light p-2 "  data-bs-toggle="modal" data-bs-target="#ticketsModal"  href="#">Comprar tickets</a>
             </button>
           </div>
         </div>
@@ -226,6 +322,7 @@
       <small class="text-secondary text-start col-md-8 mx-auto d-block mb-2">Recuerda incluir un título para tu charla</small>
       <button type="button" class="btn btn-success col-md-8 mx-auto d-block col-sm-12">Enviar</button>
     </div>
+  </form>
     <footer>
       <ul class="d-flex flex-md-row flex-column p-0 mb-0 mt-3 justify-content-center align-items-center">
         <li class="py-3 col-1 text-center">
@@ -262,11 +359,11 @@
       </li>
       </ul>
     </footer>
-  </form>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
-    ></script>
+    ></script>   
+    <script type="module" src="js/calls.js"></script>
   </body>
 </html>
